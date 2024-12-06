@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000000;
+  }
+  
+  .chat-container {
+    width: 450px;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .chat-history {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    background-color: #d0dff5b6;
+  }
+  
+  .chat-history div {
+    display: block; /* Каждое сообщение отображается как блок */
+    margin-bottom: 10px;
+    max-width: 80%;
+    padding: 10px;
+    border-radius: 10px;
+    word-wrap: break-word;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  .chat-history .message {
+    background-color: #bcd8cb;
+    color: rgb(0, 0, 0);
+    align-self: flex-start;
+  }
+  
+  .chat-history .system-message {
+    background-color: #586a8a;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  .chat-input {
+    display: flex;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    background-color: #ffffff00;
+  }
+  
+  .chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #131212;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
+  
+  .chat-input button {
+    padding: 10px;
+    background-color: #5baea6;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .chat-input button:hover {
+    background-color: #07403a;
+  }
+  
+  /* Плавная прокрутка */
+  .chat-history {
+    scroll-behavior: smooth;
+  }
+  
+  /* Анимация появления сообщения */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
